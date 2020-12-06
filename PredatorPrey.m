@@ -29,3 +29,29 @@ title('Predator-Prey Populations Over Time')
 hold on
 plot(t,y1)
 legend('prey population','predator population')
+
+figure
+dxdt=(a.*x1-r.*(x1.^2))-alpha.*x1.*y1;
+plot(x1,dxdt)
+title('Predator population growth vs. predator population')
+xlabel('Predator population')
+ylabel('Predator population growth')
+
+figure
+dydt=-c.*y1+gamma.*x1.*y1;
+plot(y1,dydt)
+title('Prey population growth vs. prey population')
+xlabel('Prey population')
+ylabel('Prey population growth')
+
+figure
+plot(x1,y1)
+title('Predator population vs. prey population')
+xlabel('Prey population')
+ylabel('Predator population')
+
+figure
+plot(dxdt,dydt)
+title('Predator population growth vs. prey population growth')
+xlabel('Prey population growth')
+ylabel('Predator population growth')
